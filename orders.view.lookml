@@ -20,6 +20,10 @@
     type: string
     sql: ${TABLE}.traffic_source
 
+  - dimension: traffic_source_status
+    type: string
+    sql: ${TABLE}.traffic_source & ${TABLE}.status
+
   - dimension: user_id
     type: number
     # hidden: true

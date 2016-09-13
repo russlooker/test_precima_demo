@@ -22,7 +22,7 @@
 
   - dimension: traffic_source_status
     type: string
-    sql: concat(${TABLE}.traffic_source,${TABLE}.status)
+    sql: concat(${TABLE}.traffic_source,"",${TABLE}.status)
 
   - dimension: user_id
     type: number

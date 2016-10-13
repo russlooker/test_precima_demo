@@ -39,3 +39,13 @@
     type: count
     drill_fields: [id, item_name, inventory_items.count]
 
+  - dimension: category_templated
+    sql: |
+      CASE WHEN {% condition category %} ${category} {% endcondition %} THEN ${category}
+      ELSE 'All Categories' END
+    
+  - filter: category_name
+    type: string
+    
+    
+    
